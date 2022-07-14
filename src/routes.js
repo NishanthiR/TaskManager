@@ -4,8 +4,8 @@ const apiRoutes = function(app) {
     app.use('/api/tasks', require('./api/tasks'));
 
     //hbs routes
-    app.use('/users', require('./hbsRoutes/users'));          //index.js called
-    app.use('/tasks', require('./hbsRoutes/tasks'));          //index.js called
+    app.use('/users', require('./hbsRoutes/users'));          
+    app.use('/tasks', require('./hbsRoutes/tasks'));          
 }
 
 module.exports = {
