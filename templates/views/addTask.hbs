@@ -11,24 +11,24 @@
     <button id="backBtn">Back</button>
     <br>
     <br>
-    <form>
+    <form id="taskForm">
         <fieldset>
             <label>Task:</label>
-            <input type="text>">
+            <input type="text>" id="task">
             <br>
             <br>
             <label>Status:</label>
-            <select>
-                <option>Complete</option>
-                <option>Incomplete</option>
+            <select id="status">
+                <option value="complete">Complete</option>
+                <option value="incomplete">Incomplete</option>
             </select>
             <br>
             <br>
             <label>Owner:</label>
-            <select>
-                <option>Abirami</option>
-                <option>Srimathi</option>
-                <option>Glory</option>
+            <select id="owner_id">
+                {{#each users}}
+                <option value="{{this._id}}">{{this.name}}
+                {{/each}}
             </select>
             <br>
             <br>

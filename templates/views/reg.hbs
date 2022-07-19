@@ -1,11 +1,12 @@
 <html>
 
 <head>
-    <title>Slide Navbar</title>
+    <title>Registration</title>
     <link rel="stylesheet" type="text/css" href="slide navbar style.css">
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reg.css">
     <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/reg.js"></script>
 </head>
 
 <body>
@@ -13,19 +14,11 @@
         <input type="checkbox" id="chk" aria-hidden="true">
 
         <div class="signup">
-            <form>
+            <form id="regForm">
                 <label for="chk" aria-hidden="true">Sign up</label>
-                <input type="text" name="txt" placeholder="User name" required="">
-                <input type="email" name="email" placeholder="Email" required="">
-                <input type="password" name="pswd" placeholder="Password" required="">
-                <button>Sign up</button>
-            </form>
-        </div>
-
-        <div class="login">
-            <form>
-                <label for="chk" aria-hidden="true">Login</label>
-                
+                <input type="email" name="email" placeholder="Email" id="email">
+                <input type="password" name="pswd" placeholder="Password" id="password">
+                <input type="submit" class="button">
             </form>
         </div>
     </div>

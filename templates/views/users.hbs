@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <h1>Users</h1>
+    <h1>{{title}}</h1>
     <a href="/users">Users</a>
     <a href="/tasks">Tasks</a>
     <br>
@@ -29,21 +29,13 @@
             </tr>
         </thead>
         <tbody>
+            {{#each users}}
             <tr>
                 <td><input type="checkbox"></td>
-                <td>Abi</td>
-                <td>abisub1@gmail.com</td>
+                <td>{{this.name}}</td>
+                <td>{{this.email}}</td>
             </tr>
-            <tr>
-                <td><input type="checkbox"></td>
-                <td>Srimathi</td>
-                <td>msrimathi12@gmail.com</td>
-            </tr>
-            <tr>
-                <td><input type="checkbox"></td>
-                <td>Glory</td>
-                <td>glorysundar@gmail.com</td>
-            </tr>
+            {{/each}}
         </tbody>
     </table>
 </body>

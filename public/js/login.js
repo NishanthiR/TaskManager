@@ -20,5 +20,9 @@ $(document).ready(function() {
         localStorage.setItem("TMusername", "username");
         localStorage.getItem("TMpassword", "password");
     })
+
+    $("#reg").click(function() {
+        location.href= "/reg";
+    })
 })
     
