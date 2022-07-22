@@ -58,4 +58,18 @@ $(document).ready(function () {
         location.href = `/users/edit/${checkedIds[0]}`;
     })
 
+    $("#refresh").click(function () {
+        location.href = '/users';
+    })
+
+    $("#search").click(function () {
+        var name = $('#name').val();
+
+        if(!name) {
+            return;
+        }
+        
+        location.href = `/users?name=${name}`
+    })
+
 })

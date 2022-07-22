@@ -3,11 +3,12 @@ $(document).ready(function () {
         location.href = '/users';
     })
 
-    $('#userForm').submit(function(e) {
+    $('#userForm').submit(function (e) {
         e.preventDefault();
         var name = $('#name').val();
         var email = $('#email').val();
         var password = $('#password').val();
+        var userId = $('#userId').val();
 
         if (!name || !email || !password) {
             alert("Enter required field");
@@ -20,16 +21,26 @@ $(document).ready(function () {
             password
         }
 
+        var url = '/api/users';
+        var type = 'POST';
+        var msg = 'User saved successfully';
+
+        if (userId) {
+            url = `/api/users/${userId}`;
+            type = 'PUT';
+            msg = 'User updated Successfully';
+        }
+
         $.ajax({
-            url: '/api/users',
-            type: 'POST',
+            url: url,
+            type: type,
             data: userObj,
             success: function () {
-                alert('Form submitted successfully');
+                alert(msg);
                 location.href = '/users';
             },
             error: function () {
-                alert('Unable to save user');
+                alert(msg);
             }
         })
     })
